@@ -2,16 +2,13 @@ import React from 'react';
 import './Header.css';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import MenuBar from './Menu';
 import {Link} from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from '../firebase';
 
-
-
 function Header() {
 
-  const [{basket, user}, dispatch ] = useStateValue();
+  const [{basket, user} ] = useStateValue();
 
   const handleAuthentication=()=>{
     if(user){
